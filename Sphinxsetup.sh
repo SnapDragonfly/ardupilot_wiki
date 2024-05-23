@@ -57,12 +57,18 @@ python3 -m pip install --user --upgrade sphinx==${SPHINX_VERSION} "docutils<0.19
 python3 -m pip install --user --upgrade lxml
 
 # Install sphinx theme from ArduPilot repository
-python3 -m pip install --user --upgrade git+https://github.com/ArduPilot/sphinx_rtd_theme.git
+#python3 -m pip install --user --upgrade git+https://github.com/ArduPilot/sphinx_rtd_theme.git
+cd sphinx_rtd_theme
+python3 -m pip install --user --upgrade .
+cd ..
 
 # and youtube and video plugins:
 # This command might require a --force option if you have and older extension installed
 # Rerun Sphinxsetup.sh after doing that
-python3 -m pip install --user --upgrade git+https://github.com/ArduPilot/sphinxcontrib-youtube.git
+#python3 -m pip install --user --upgrade git+https://github.com/ArduPilot/sphinxcontrib-youtube.git
+cd sphinxcontrib-youtube
+python3 -m pip install --user --upgrade .
+cd ..
 
 # Install flake8
 python3 -m pip install --user --upgrade flake8==3.7.9
